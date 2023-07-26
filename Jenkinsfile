@@ -28,7 +28,6 @@ pipeline{
     post{
         always{
             sh "docker logs ${NAME}"
-            sh "docker rmi ${NAME}"
-        }
+                  }
     }
 }

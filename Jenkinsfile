@@ -1,7 +1,7 @@
 pipeline{
     agent any
     environment{
-        NAME = "First_api"
+        NAME = "first_api"
     }
     stages{
         

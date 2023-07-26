@@ -13,6 +13,7 @@ pipeline{
         
         stage("Run"){
             steps{
+                sh "docker ps | grep ${NAME} && docker stop ${NAME}"
                 sh "docker run -d -p 5000:3000 --name ${NAME} ${NAME}:latest"
                 sh "sleep 5"
                 sh "docker ps -a"
